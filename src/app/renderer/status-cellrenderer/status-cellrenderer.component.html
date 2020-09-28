@@ -1,0 +1,12 @@
+<!-- <p [ngStyle]="{'background-color': params.value === 'Available' ? 'green' : 'red'}">{{ params.value }}</p> -->
+
+    <!-- <mat-icon [ngClass]="{'true-color': params.value === 'Available', 'false-color': params.value ==='Not Available'}">thumb_up</mat-icon> -->
+
+    <div *ngIf="availability" class="flex-container">
+        <div [ngStyle]="{'color': 'red'}" class="icon"><mat-icon>highlight_off</mat-icon></div>
+        <div class="textBox">Available</div>
+    </div>
+    <div *ngIf="!availability" class="flex-container">
+        <div [ngStyle]="{'color': 'green'}" class="icon"><mat-icon>check_circle_outline</mat-icon></div>
+        <div class="textBox">Not Available</div>
+    </div>

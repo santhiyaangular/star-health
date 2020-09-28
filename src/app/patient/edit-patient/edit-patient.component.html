@@ -1,0 +1,42 @@
+<p>edit-patient works!</p>
+<h2 mat-dialog-title>Edit doctor</h2>
+<mat-dialog-content>
+    <form [formGroup]="patientForm" autocomplete="off" 
+    novalidate (ngSubmit)="savePatientDetail(patientForm.value)" >
+    <mat-form-field>
+        <input matInput  
+            formControlName="firstName"
+            placeholder="First Name" name="firstName">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput
+            formControlName="lastName"
+            placeholder="Last Name" name="lastName">
+    </mat-form-field>   
+    <mat-form-field>
+        <input matInput 
+        formControlName="visits"    
+        placeholder="Visits" name="visits">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput 
+            formControlName="age"
+            placeholder="Age" name="age">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput 
+            formControlName="pcp"
+            placeholder="Pcp" name="pcp">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput
+            formControlName="insurance"
+            placeholder="Insurance" name="insurance">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary">Save</button>
+</form>
+
+</mat-dialog-content>
+
+

@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>View doctor</h2>
+<mat-dialog-content>
+    <form [formGroup]="doctorForm">
+        <mat-form-field>
+            <input matInput  
+                formControlName="firstName"
+                placeholder="First Name" name="firstName">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput
+                formControlName="lastName"
+                placeholder="Last Name" name="lastName">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput 
+                formControlName="rating"
+                placeholder="Rating" name="rating">
+        </mat-form-field>
+        <mat-form-field> 
+            <input matInput 
+                formControlName="age"
+                placeholder="Age" name="age">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput
+                formControlName="experience"
+                placeholder="Experience" name="experience">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput 
+                formControlName="insurance"
+                placeholder="Insurance" name="insurance">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput 
+                formControlName="status"
+                placeholder="Status" name="status">
+        </mat-form-field>
+        <div>
+            <button mat-raised-button (click)="onClick()">Okay</button>
+        </div>
+    </form>
+</mat-dialog-content>
+        
+
+ 

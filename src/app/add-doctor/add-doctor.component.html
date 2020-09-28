@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Add doctor</h2>
+<mat-dialog-content>
+    <form [formGroup]="newDoctorForm" (ngSubmit)="onNewDoctor(newDoctorForm.value)">
+        <div>
+            <mat-form-field>
+                <mat-label>FirstName</mat-label>
+                <input matInput formControlName="firstName" placeholder="firstName">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>LastName</mat-label>
+                <input matInput formControlName="lastName" placeholder="lastName">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Age</mat-label>
+                <input matInput formControlName="age" placeholder="age">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Rating</mat-label>
+                <input matInput formControlName="rating" placeholder="rating">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Experience</mat-label>
+                <input matInput formControlName="experience" placeholder="experience">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Insurance</mat-label>
+                <input matInput formControlName="insurance" placeholder="insurance">
+            </mat-form-field>
+            <!-- <mat-form-field>
+                <mat-label>Status</mat-label>
+                <mat-select formControlName="status" name="status">
+                    <mat-option value="Available">Available</mat-option>
+                    <mat-option value="Not Available">Not Available</mat-option>
+                </mat-select>
+            </mat-form-field> -->
+        </div>
+        <div>
+            <button mat-raised-button color="primary">Add</button>
+        </div>
+    </form>
+</mat-dialog-content>
+

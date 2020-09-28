@@ -1,0 +1,15 @@
+<p>
+    <mat-toolbar color="primary">
+      <span>Doctor List</span>
+    </mat-toolbar>
+</p>
+
+<ag-grid-angular
+    style="width: 100%; height: 100%;"
+    class="ag-theme-alpine"
+    [rowData]="doctorData"
+    [columnDefs]="doctorColumnDefs"
+    [frameworkComponents]="frameworksComponents"
+    (gridReady)="onGridReady($event)"
+>
+</ag-grid-angular>

@@ -1,0 +1,43 @@
+<h2 mat-dialog-title>Add Paient</h2>
+<mat-dialog-content>
+    <form [formGroup]="newPatientForm" (ngSubmit)="onNewPatient(newPatientForm.value)">
+        <div>
+            <mat-form-field>
+                <mat-label>FirstName</mat-label>
+                <input matInput formControlName="firstName" placeholder="firstName">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>LastName</mat-label>
+                <input matInput formControlName="lastName" placeholder="lastName">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Age</mat-label>
+                <input matInput formControlName="age" placeholder="age">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Visits</mat-label>
+                <input matInput formControlName="visits" placeholder="rating">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Insurance</mat-label>
+                <input matInput formControlName="insurance" placeholder="insurance">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Doctor Name</mat-label>
+                <mat-select formControlName="doctor">
+                    <mat-option [value]="doctor" *ngFor = "let doctor of doctorList">{{ doctor.firstName  }} {{ doctor.lastName }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            
+          
+        </div>
+        <div>
+            <button mat-raised-button color="primary">Add</button>
+        </div>
+    </form>
+</mat-dialog-content>
+<!-- <mat-dialog-actions>
+    <button mat-button mat-dialog-close="">Okay</button>
+</mat-dialog-actions> -->
+
+<!-- <button (click)="xxx()">okay</button> -->
