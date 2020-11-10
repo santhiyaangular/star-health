@@ -6,7 +6,7 @@ export class PatientModel {
         public visits: number,
         public age: number,
         public doctor: any,
-        public insurance: string,
+        public insurance: any,
         public payment: number
 
     ) { }

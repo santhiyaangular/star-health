@@ -4,6 +4,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { PatientService } from 'src/app/shared/patient.service';
 import { DoctorService } from 'src/app/shared/doctor.service';
+import { InsuranceModel } from 'src/app/shared/insurance-model';
 
 @Component({
   selector: 'app-add-patient',
@@ -13,7 +14,11 @@ import { DoctorService } from 'src/app/shared/doctor.service';
 export class AddPatientComponent implements OnInit {
   addPatient: PatientModel
   doctorList: any;
-  x = 'kk';
+  insuranceList = [ new InsuranceModel(1000, 'family-insurance', 'uhc'),
+                    new InsuranceModel(1001, 'company-insurance', 'aetna')
+
+];
+  
   public newPatientForm: FormGroup;
   constructor(public dialogRef: MatDialogRef<AddPatientComponent>,
     private patientService: PatientService,

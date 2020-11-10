@@ -27,6 +27,7 @@ export class DoctorListComponent implements OnInit {
 
 
     this.doctorService.getDoctorData().subscribe(responseData => {
+      
       // debugger
       this.doctorData = responseData;
     });
